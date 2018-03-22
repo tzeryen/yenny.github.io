@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+    
+    <head>
+      <title>Yen Travel Blog</title>
+      <link href="travel.css" rel="stylesheet" type="text/css"/>
+      <style>
+      a {text-decoration: none;
+      }
+    </style>
+    </head> 
+ 
+<body>
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+    $(window).on('scroll', function() {
+      if($(window).scrollTop()) {
+        $('nav').addClass('black');
+      }
+      else {
+        $('nav').removeClass('black');
+      }
+    }) 
+
+    $(window).scroll(function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll >= fixmeTop){
+        $('.navbar').addClass("sticky");
+    } else {
+        $('.navbar').removeClass("sticky");
+    }
+});
+
+
+
+</script>
+
+  <div class="navbar">
+    <nav>
+      <div class="logo" class="active"><a href="index.html#heading">YEN TRAVEL BLOG</a></div>
+
+      <ul>
+        <li><a href="#about">About Me</a></li>
+      
+       <li><a href="#countries">Places I've Been</a>
+          
+        
+              <div class="menu">
+
+                  <div class="icon-close">
+                    <img src="http://www.iesolutions.eu/static/_img/client/close-small.png" width="40" height="40">
+                  </div>
+
+                  <ul>
+                    <li><a href="paris.html">Paris</a></li>
+                    <li><a href="palma.html">Palma</a></li>
+                    <li><a href="taiwan.html">Taipei</a></li>
+                    <li><a href="canada.html">Vancouver</a></li>
+                  </ul>
+                </div>
+          
+        </li>
+
+        <li><a href="#contact">Get In Touch</a></li>
+      
+    </ul>
+
+    </nav>
+  </div>
+
+
+<div class="main">
+
+  <div class="heading" id="heading">
+
+    <div class="heading-overlay">
+      <h1>Life is filled with Adventures</h1>
+    </div>
+    
+  </div>
+
+  <div class="about" id="about">
+    <img src="https://c1.staticflickr.com/1/809/39966707825_00e2e406e2.jpg" alt="Yen Picture" class="float-img">
+
+    <h2> About Me </h2>
+
+    <p>Hello, welcome to my blog! <br>
+    My name is Yen. I grew up in Malaysia and am currently studying in the UK. Having able to study here, I seize the opportunity to travel around Europe. I love travelling because I get to know myself a little bit more. Besides Europe, I have also travelled to different parts of the world. This blog is to share my experience and give fellow travellers like YOU a little tip on the places I've been. </p>
+  
+  </div>
+
+  <div class="countries" id="countries">
+    <h2>Places I've Been</h2>
+      <div class="countries-section">
+        <ul class="countries-grid">
+          <li>
+            <h4>North America</h4>
+            <div class="countries-box countries-img-1">
+              <a href="canada.html">
+                <h3>Vancouver</h3>
+              </a>
+            </div>
+          </li>
+  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+            <li>
+              <h4>Europe</h4>
+            <div class="countries-box countries-img-2">
+              <a href="paris.html">
+                <h3>Paris</h3>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="countries-box countries-img-4">
+              <a href="palma.html">
+                <h3>Palma</h3>
+              </a>
+            </div>
+          </li>
+
+         <br>
+         <br>
+
+          <li>
+            <h4>Asia</h4>
+            <div class="countries-box countries-img-3">
+              <a href="taiwan.html">
+                <h3>Taipei</h3>
+              </a>
+            </div>
+          </li>
+
+          
+        </ul>
+
+
+        </div>
+
+      </div>
+   
+   <div class="contact" id="contact">
+        <h2>Get In Touch</h2>
+
+        <div class="contact-form">
+          <form id="contact-form" method="post" action"contact-form-handler.php">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+            <br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+
+            <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea><br>
+
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
+
+          </form>
+      </div>
+
+
+</div>
+
+<div class="footer">
+  <p>Copyright &copy 2018 Tzer Yen Ng. All Rights Reserved.</p>
+</div>
+
+
+
+</body>
